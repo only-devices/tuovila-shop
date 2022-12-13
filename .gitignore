@@ -7,3 +7,5 @@ public
 .env
 *.log
 gatsby-node.old.js
+package-lock.json
+.DS_Store

@@ -76,7 +76,7 @@ function SearchPage({
   location,
 }) {
   // These default values come from the page query string
-  const queryParams = getValuesFromQuery(location.search || serverData.query)
+  const queryParams = getValuesFromQuery(location.search || 'Grommets')
 
   const [filters, setFilters] = React.useState(queryParams)
   // eslint-disable-next-line react-hooks/exhaustive-deps
