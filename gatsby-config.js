@@ -34,6 +34,20 @@ module.exports = {
         icon: "static/favicon-512.png",
       },
     },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: process.env.GOOGLE_TAGMANAGER_ID,
+        includeInDevelopment: false,
+        defaultDataLayer: function () {
+          return {
+            pageType: window.pageType,
+          }
+        },
+        routeChangeEventName: "routeChangeEvent",
+        enableWebVitalsTracking: false,
+      },
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
